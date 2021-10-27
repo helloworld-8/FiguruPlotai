@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moksliukas.Core", "Moksliukas.Core\Moksliukas.Core.csproj", "{26124A61-5675-4729-BE39-3BE2F6D14BC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moksliukas.WPF", "Moksliukas.WPF\Moksliukas.WPF.csproj", "{8D486057-CD1F-4ECE-A60F-4403DA72D695}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26124A61-5675-4729-BE39-3BE2F6D14BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26124A61-5675-4729-BE39-3BE2F6D14BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26124A61-5675-4729-BE39-3BE2F6D14BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26124A61-5675-4729-BE39-3BE2F6D14BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D486057-CD1F-4ECE-A60F-4403DA72D695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D486057-CD1F-4ECE-A60F-4403DA72D695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D486057-CD1F-4ECE-A60F-4403DA72D695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D486057-CD1F-4ECE-A60F-4403DA72D695}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {570DDFD4-6A44-4276-8059-B200F1BB7276}
+	EndGlobalSection
+EndGlobal

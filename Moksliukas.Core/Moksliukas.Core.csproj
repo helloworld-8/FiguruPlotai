@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26124A61-5675-4729-BE39-3BE2F6D14BC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Moksliukas.Core</RootNamespace>
+    <AssemblyName>Moksliukas.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Models\FigureArgumentModel.cs" />
+    <Compile Include="Models\FiguresModel.cs" />
+    <Compile Include="Models\FigureModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\InitializeFiguresService.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\Argument.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\ArgumentExtension.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\Constant.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\Expression.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\Function.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\FunctionExtension.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\FunctionExtensionVariadic.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\AstronomicalConstants.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\BinaryRelations.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\BooleanAlgebra.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\Calculus.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\Coefficients.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\Evaluate.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\MathConstants.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\MathFunctions.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\NumberTheory.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\PhysicalConstants.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\PrimesCache.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\ProbabilityDistributions.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\SpecialFunctions.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\SpecialValue.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\SpecialValueTrigonometric.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\Statistics.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mathcollection\Units.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\Miscellaneous.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\mXparser.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\BinaryRelation.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\BitwiseOperator.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\BooleanOperator.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\CalculusOperator.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\ConstantValue.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\Function1Arg.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\Function2Arg.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\Function3Arg.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\FunctionVariadic.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\KeyWord.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\Operator.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\ParserSymbol.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\RandomVariable.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\Token.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\parsertokens\Unit.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\PrimitiveElement.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\RecursiveArgument.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\regressiontesting\PerformanceTests.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\regressiontesting\RegTestExpression.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\regressiontesting\RegTestExpressionAPI.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\regressiontesting\RegTestSyntax.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\regressiontesting\RunTest.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\ParseException.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\SimpleCharStream.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\SyntaxChecker.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\SyntaxCheckerConstants.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\SyntaxCheckerTokenManager.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\Token.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\TokenMgrError.cs" />
+    <Compile Include="Vendors\org\mariuszgromada\math\mxparser\Tutorial.cs" />
+    <Compile Include="ViewModels\FigureViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Vendors\org\mariuszgromada\math\mxparser\regressiontesting\PerformanceTests.cs.old" />
+    <None Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\generate-SyntaxChecker.bat" />
+    <None Include="Vendors\org\mariuszgromada\math\mxparser\syntaxchecker\SyntaxChecker.jj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

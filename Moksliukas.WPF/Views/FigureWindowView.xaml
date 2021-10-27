@@ -1,0 +1,21 @@
+﻿<Window x:Class="Moksliukas.WPF.Views.FigureWindowView"  
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+            Title="MainWindow" Height="485" Width="525">
+    <Grid Margin="0,0,0,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="100,35,0,0" Name="txtFigureName" VerticalAlignment="Top" Width="auto" Text="{Binding Figure.FigureName}" />
+        <Label Content="Figure Name" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="10,35,0,0" Name="label3" VerticalAlignment="Top" />
+
+        <StackPanel  Margin="12,200,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" Name="stackpanel"/>
+
+        <!--<Button Content="Update" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="310,40,0,0" Name="btnUpdate"   
+                VerticalAlignment="Top" Width="141"  
+                Command="{Binding Path=UpdateCommad}"  />-->
+
+    </Grid>
+</Window>  

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Moksliukas.WPF.Views.MainWindowView"  
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+            Title="MainWindow" Height="485" Width="525">
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView Name="FigureGrid" Grid.Row="1" Margin="10"  ItemsSource="{Binding Figures}" SelectedItem="{Binding SelectedFigure}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="FigureId" DisplayMemberBinding="{Binding FigureId}"  Width="50"/>
+                    <GridViewColumn Header="FigureName" DisplayMemberBinding="{Binding FigureName}"  Width="auto" />
+                    <GridViewColumn Header="FigureExpression" DisplayMemberBinding="{Binding FigureExpression}" Width="auto" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Select" Grid.Row="2" Height="23" HorizontalAlignment="Right" Margin="10" Name="btnSelectFigure"   
+                VerticalAlignment="Top" Width="141" Click="btnSelectFigure_Click"  />
+    </Grid>
+</Window>  
